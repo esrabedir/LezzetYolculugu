@@ -1,0 +1,842 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+:root {
+    --main-color: #f64949;
+    --border: 1px solid f#c3c1c1;
+    
+}
+
+#hoverElement {
+  width: 150px;
+  height: 125px;
+  background-color: lightblue;
+  text-align: center;
+  cursor: pointer;
+  gap: 2.5;
+  
+}
+
+.yannavbar {
+  font-size: 20px;
+  color: white;
+  border: 2px solid white;
+  width: 80px; 
+  padding-left: 10px;
+  margin-left: 30px;
+  height: 30px;
+  border-radius: 3rem;
+
+}
+
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.clock {
+  font-size: 48px;
+}
+
+.date {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+* {box-sizing:border-box}
+
+.animated {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.scroll-down-btn {
+  position: fixed;
+  top: 20px; /* Yükseklik ayarlanacak */
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.scroll-down-btn.show {
+  opacity: 1;
+}
+
+.scroll-down-btn.show {
+  opacity: 1;
+}
+
+#cookieConsent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+#closeCookieConsent {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+.favorite {
+  cursor: pointer;
+}
+
+.favorited {
+  color: red;
+}
+
+
+h1 {
+  opacity: 0;
+}
+
+.animate {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+*{
+    font-family: "Roboto Serif", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+    
+}
+
+
+body {
+    margin:0;
+    height: 600vh;
+    padding: 0;
+    background-image: url('../img/tahta.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+section{
+    padding: 3.5rem 3.4%;
+}
+
+a{
+    color: rgba(0, 0, 0, 0.807);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 20px 37.5px;
+    border-radius: 30rem;
+    font-size: 17px;
+    color: white;
+    background-color: black;
+    
+}
+
+.heading{
+    color: white;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid white;
+    z-index: 30;
+}
+
+.logo img{
+    height: 60px;
+    border-radius: 50px;
+    
+  
+}
+
+.search-input{
+    font-size: 16px;
+    color: black;
+    padding: 1rem;
+    text-transform: none;
+    border-radius: 3rem;
+}
+
+.header {
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin: 50px;
+    border-radius: 50px;
+    position: sticky;
+    top: 5px;
+    box-shadow:0px 0px 15px -3px rgb(0, 0, 0) ;
+
+}
+
+.header .navbar a{
+    margin: 10px;
+    font-size: 20px;
+    color: #f64949; 
+}
+
+.header .navbar a:hover {
+    border-color:  #f64949;
+    padding-bottom: 1px;
+}
+
+.header .buttons button {
+    font-size: 20px;
+    margin-left: 30px;
+    background-color: transparent;
+    border: none;
+    color:#f64949;
+}
+
+
+.home {
+    min-height: 100vh;
+    background: url(../img/arkplan.jpg) no-repeat; 
+    background-size: cover;
+    background-position: center;
+    margin-top: -10.3rem;
+    display: flex;
+    align-items: center;
+    padding-top: 130px;
+
+}
+
+.home .content {
+    max-width: 60rem;
+}
+
+.home .content h3 {
+    font-size: 60px ;
+    color: white;
+    
+}
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1,8;
+    padding:  1rem 0;
+    color: white;
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 15px;
+}
+
+.menu .box-container .box{
+    padding: 30px;
+    background-color: white;
+    border-radius: 3rem;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.menu .box-container .box img{
+    width: 100%;
+    object-fit: cover;  
+}
+
+.menu .box-container .box .menu-category {
+    font-size: 15px;
+}
+
+.menu .box-container .box h3 {
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+
+
+.trend .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+
+.trend .box-container .box {
+    text-align: center;
+    background-color: white;
+    position: relative;
+    border-radius: 3rem;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+    align-items: flex-start;
+    min-height: 600px;
+
+
+    
+}
+
+.trend .box-container .box .box-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+}
+
+.trend .box-container .box .box-head .title{
+   font-size: 15px;
+}
+
+.trend .box-container .box .box-head .name{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: start;
+    overflow-wrap:anywhere ;
+ }
+
+ .trend .box-container img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 500px;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    border-radius: 3rem;
+ }
+
+ .trend .box-container .box-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+ }
+
+ .hakkımızda .row{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+ }
+ 
+ .hakkımızda .row .image{
+    flex: 0 1 30rem;
+ }
+
+ .hakkımızda .row .img{
+    width: 100%;
+ }
+
+ .hakkımızda .row .content{
+    flex: 1 1 30rem;
+ }
+
+ .hakkımızda .row .content h3{
+    font-size: 2rem;
+    color: white;
+ }
+
+ .hakkımızda .row .content p{
+    font-size: 1.0rem;
+    color: white;
+    padding: 1rem 0;
+    line-height: 1.2;
+ }
+
+ .yorum .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap:1.5rem;
+ }
+
+.yorum .box-container .box {
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: white;
+    border-radius: 3rem;
+}
+
+.yorum .box-container .box p{
+    font-size: 1.4rem;
+    line-height: 1.6;
+    padding: 2rem 0;
+}
+
+.yorum .box-container .box .user {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.yorum .box-container .box h3 {
+    padding: 1 rem 0;
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.yorum .box-container .box .stars i {
+    font-size: 1.5rem;
+    color: gold;
+}
+
+.iletişim .row {
+    display: flex;
+    background-color: black;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-radius: 3rem;
+    
+}
+
+
+.iletişim .row .video {
+    flex:1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+.iletişim .row form{
+    flex:1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.iletişim .row form h3 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color:white;
+}
+
+.iletişim .row form .inputBox {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;   
+}
+
+.iletişim .row form .inputBox i{
+    color: white;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.iletişim .row form .inputBox input{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: white;
+    text-transform: none;
+    background-color: transparent;
+}
+
+.iletişim .row form .btn {
+    color: rgba(83, 81, 81, 0.778);
+    background-color: white;
+    font-weight:bold ;
+}
+
+.blogs .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+
+.blogs .box-container .box {
+    background-color: white;
+    border-radius: 3rem;
+}
+
+.blogs .box-container .box .image{
+   height:250px;
+   overflow: hidden;
+   width: 100%;
+   border-top-left-radius: 3rem;
+   border-top-right-radius: 3rem;
+}
+
+
+.blogs .box-container .box .image img{
+  height: 100%;
+  object-fit:cover;
+  width:100%;
+ }
+
+ .blogs .box-container .box:hover .image img{
+  transform: scale(1.2);
+ }
+
+ .blogs .box-container .box .content {
+  padding: 2rem;
+ }
+  
+ .blogs .box-container .box .content .title {
+    line-height: 1.5;
+    font-size: 25px;
+ }
+
+ .blogs .box-container .box .content span {
+    display: block;
+    padding-top: 10px;
+    font-size: 20px;
+ }
+
+ .blogs .box-container .box .content p{
+   font-size: 15px;
+   line-height: 1.8;
+   color: rgba(83, 81, 81, 0.778);
+   padding: 1rem 0;
+ }
+
+ section.ok{
+    background-color: #555;
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  #infoBox {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #myText {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #yapılacaklar {
+    color: white;
+    font-size: 30px;
+  }
+
+  #tarifEkleButton {
+    border: 1px;
+    border: 3rem;
+  }
+
+  .comment-section {
+    position: relative;
+    max-width: 600px;
+   padding-right: 450px;
+    padding: 20px;
+}
+
+#commentList {
+    margin-top: 20px;
+}
+
+.comment {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.comment p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.comment span {
+    font-weight: normal;
+}
+
+
+  #tarifListesi {
+    color: white;
+    font-size: 20px;
+  }
+
+  #tarifAdi {
+    border: solid 1px white;
+    border-radius: 3rem;
+    width: 350px;
+    height: 35px;
+  }
+
+  #tarifEkleButton {
+    border: solid 1px white;
+    width: 100px;
+    height: 25px;
+    border-radius: 3rem;
+  }
+
+  #kayan-panel {
+    position: fixed;
+    top: -100px; /* Panelin başlangıçta ekranın dışında olmasını sağlar */
+    left: 100px;
+    transform: translateX(-50%);
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    transition: top 0.5s ease; /* Geçiş efektini ayarlar */
+}
+
+
+ .footer {
+    background-color: black;
+    text-align: center;
+ }
+
+ .footer .search {
+    display:flex;
+    justify-content: center;
+ }
+
+ .footer .search .search-input {
+    width: 300px;
+ }
+
+ .footer .search .btn {
+    background-color: white;
+    color: black;
+    padding: 1rem 2rem;
+    margin-left: 1rem;
+ }
+
+ .footer .paylaş {
+    padding: 2rem 0;
+ }
+
+ .footer .paylaş a{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    font-size: 20px;
+ }
+
+ .footer .paylaş a:hover{
+    background-color: #c3c1c1;
+ }
+
+ .footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+ }
+
+ .footer .links a {
+    background-color:white ;
+    color: rgba(0, 0, 0, 0.622);
+    padding: 7px 20px;
+    font-size: 20px;
+ }
+
+ .footer .links a:hover {
+    background-color:#c3c1c1;
+    opacity: 0.7;
+ }
+
+ .footer .credit {
+    font-size: 20px;
+    color: white;
+    font-weight: 300;
+    padding-top: 15px;
+ }
+
+ .footer .credit span {
+    color:#f64949;
+ }
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }

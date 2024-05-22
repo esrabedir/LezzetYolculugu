@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Lezzet Yolculuğu</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
+
+</head>
+
+<body onbeforeunload="return myFunction()">
+
+  <div class="animated">
+    <h1 class="animate">Hoşgeldiniz</h1>
+  </div>
+  
+  <div id="hoverElement">
+    Bir tutam sevgi, bir kaşık lezzet ile buluşur.
+</div>
+
+  
+  <div class="clock-container">
+    <div class="clock" id="clock"></div>
+    <div class="date" id="date"></div>
+</div>
+
+<button class="scroll-down-btn" id="scrollDownBtn">
+  <span>↓</span>
+</button>
+
+<div id="cookieConsent">
+  <div id="closeCookieConsent">x</div>
+  Bu web sitesi çerez kullanmaktadır. Çerezlerin kullanımı hakkında daha fazla bilgi almak için <a href="#" target="_blank">çerez politikamızı</a> inceleyebilirsiniz.
+</div>
+
+  <!-- The overlay -->
+  <div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+    <!-- Overlay content -->
+    <div class="overlay-content">
+          <a href ="index.html">Ana Sayfa</a>
+          <a href ="#">Tarifler</a>
+          <a href ="#">Menüler</a>
+          <a href ="#">Trend</a>
+          <a href ="#">Yorumlar</a>
+          <a href ="#">Blog</a>
+          <a href ="contact.html">İletişim</a>
+    </div>
+  
+  </div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<div class="yannavbar">
+<span onclick="openNav()">Menü</span>
+</div>
+
+    <header class="header">
+      <a href = "#" class ="logo">
+        <img src = "img/logom.jpg.png" alt="logo"/>
+      </a>
+      <nav class="navbar">
+        <a href ="index.html">Ana Sayfa</a>
+        <a href ="#">Tarifler</a>
+        <a href ="#">Menüler</a>
+        <a href ="#">Trend</a>
+        <a href ="#">Yorumlar</a>
+        <a href ="#">Blog</a>
+        <a href ="contact.html">İletişim</a>
+      </nav>
+
+      <div class="buttons">
+        <button>
+          <a href = "#" id ="search-btn"></a>
+          <a href ="#"><i class="fa-solid fa-magnifying-glass"></i></a> 
+        </button>
+      </div>
+      
+    </header>
+
+      <section class="home">
+        <div class="content">
+         <h3>LEZİZ YEMEK </h3>
+         <h3>TARİFLERİ</h3>
+         <p>Pratik yemek tarifleriyle mutfağa yeni başlayanlar bile kolaylıkla yemek yapabilecek. Etli yemekler, zeytinyağlı yemek tarifleri, yöresel lezzetler ve daha fazlası yüzlerce çeşidiyle karşınızda. Resimli, videolu nefis yemek tarifleri, mutfaktaki deneyimlerinizi çok daha keyifli hale getirecek. Hamur işleri, tatlılar, kekler, kurabiyeler kolay anlatımları ve püf noktalarıyla sofralarınızı zenginleştirecek. Lezzete ve sunuma önem veren herkese bu pratik, kolay ve denenmiş yemek tarifleri ilham verecek. Bir tarif seçin ve hazırlamaya başlayın!</p>
+         <a href="#" class ="btn">Tarife Bak</a>
+        </div>
+       </section>
+
+       <section class="menu">
+        <h1 class="heading">Menüler</h1>
+        <div class="box-container">
+          <div class="box">
+          <div class="box-head">
+            <img src="img/cerkezpilavı.jpg" alt="menü" />
+            <span class="menu-category">Pratik Tarifler</span>
+            <h3>Tavuklu Çerkez Pilavı</h3>
+          </div>
+          <div class="box-bottom">
+              <a href="#" class="btn">Hemen Dene</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box-head">
+            <img src="img/portakallitavuksote.jpg" alt="menü" />
+            <span class="menu-category">Pratik Tarifler</span>
+            <h3>Portakallı Tavuk Sote</h3>
+          </div>
+          <div class="box-bottom">
+              <a href="#" class="btn">Hemen Dene</a>
+          </div>
+        </div>
+        
+        <div class="box">
+          <div class="box-head">
+            <img src="img/kapuska.jpg" alt="menü" />
+            <span class="menu-category">Pratik Tarifler</span>
+            <h3>Kapuska</h3>
+          </div>
+          <div class="box-bottom">
+              <a href="#" class="btn">Hemen Dene</a>
+          </div>
+        </div>
+        
+        <div class="box">
+          <div class="box-head">
+            <img src="img/mantıkuskus.jpg" alt="menü" />
+            <span class="menu-category">Pratik Tarifler</span>
+            <h3>Mantı Tadında Kuskus</h3>
+          </div>
+          <div class="box-bottom">
+              <a href="#" class="btn">Hemen Dene</a>
+          </div>
+        </div>
+       </section>
+
+       
+       <section class="trend">
+         
+        <h1 class="heading">TRENDLER</h1>
+        <div class="box-container">
+          <div class="box">
+            <div class="box-head">
+              <span class="title">TRENDLER 🔥</span>
+              <a href="#" class="name">Latte Pasta</a>
+            </div>
+            <div class="image">
+              <img src="img/latte.jpg" alt="Latte Pasta" />
+            </div>
+            <div class="box-bottom">
+              <a href="#" class="btn">Hemen Dene</a>
+          </div>
+          </div>
+          
+
+          <div class="box">
+            <div class="box-head">
+              <span class="title">TRENDLER 🔥</span>
+              <a href="#" class="name">Kıbrıs Tatlısı</a>
+            </div>
+            <div class="image">
+            </div>
+            <img src="img/kıbrıs.jpg" alt="Kıbrıs Tatlısı" />
+            <div class="box-bottom">
+              <a href="#" class="btn">Hemen Dene</a>
+          </div>
+          </div>
+
+          <div class="box">
+            <div class="box-head">
+              <span class="title">TRENDLER 🔥</span>
+              <a href="#" class="name">Çıtır Yufka Mantısı</a>
+            </div>
+            <div class="image">
+              <img src="img/mantı.jpg" alt="Çıtır Yufka Mantısı" />
+            </div>
+            <div class="box-bottom">
+              <a href="#" class="btn">Hemen Dene</a>
+          </div>
+          </div>
+
+          <div class="box">
+            <div class="box-head">
+              <span class="title">TRENDLER 🔥</span>
+              <a href="#" class="name">Fellah Köftesi</a>
+            </div>
+            
+            <div class="image">
+              <img src="img/fellah.jpg" alt="Fellah Köftesi" />
+            </div>
+            <div class="box-bottom">
+              <a href="#" class="btn">Hemen Dene</a>
+          </div>
+          </div>
+        </div>
+       </section>  
+
+ <section class="hakkımızda">
+  <h1 class="heading">Hakkımızda</h1>
+  <div class="row">
+    <div class="image">
+      <img src="img/cooking.jpg" alt="Hakkımızda" />
+    </div>
+    <div class="content">
+      <h3>Lezzet Durağı Hakkında</h3>
+      <p>Hoş geldiniz! Benim adım Esra ve bu benim yemek tarifi sitesi. Burada, yemek yapmayı seven herkes için bir şeyler var. Küçük yaşlardan beri mutfakta vakit geçiriyor ve farklı lezzetleri denemekten keyif alıyorum. Yemek yapmak benim için sadece bir hobi değil, aynı zamanda bir tutku. Bu sitede, yıllar boyunca biriktirdiğim ve sevdiklerimle paylaştığım tarifleri sizlerle paylaşmak istiyorum.
+        Amacım, herkesin mutfağında güvenle yemek yapabileceği, lezzetli ve sağlıklı tarifler sunmaktır. Tariflerimi oluştururken, basitlik, sağlıklı malzemeler ve lezzet en önemli önceliklerimdir. Her tarifimi detaylı bir şekilde açıklar, adım adım talimatlar verir ve pratik ipuçları paylaşırım.
+        Bu site, sadece yemek tarifleri sunmakla kalmaz, aynı zamanda bir yemek topluluğunun bir parçası olmanızı sağlar. Tariflerimi deneyen, yorum yapan ve kendi tariflerini paylaşan bir topluluk oluşturmak istiyorum. Böylece, birlikte yemek yapmanın keyfini çıkarabilir ve birbirimizden öğrenebiliriz.
+        Benim yemek tarifi sitesine hoş geldiniz. Burada, yemek yapmanın ne kadar keyifli ve tatmin edici olabileceğini keşfedeceğinizi umuyorum. İyi yemekler!</p>
+   <a href="#" class="btn">Daha Fazla Bilgi Edinin</a>
+      </div>
+  </div>
+ </section>
+ 
+<section class="yorum">
+  <h1 class="heading">Kullanıcı Yorumları</h1>
+  <div class="box-container">
+    <div class="box">
+      <img src="img/tırnak.jpg" alt="Alıntı"/>
+      <p>Lezzet Durağı'ndaki tarifler harika! Kıbrıs tatlısını denedim ve gerçekten lezzetliydi. Hem kolay hem de leziz bir seçenek. Bir sonraki denemem Latte pasta olacak, merakla bekliyorum!</p>
+    <img src="img/avatar1.jpg" alt="avatar"
+    class="user" />
+    <h3>Ayşe Demir</h3>
+    <div class="stars">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+    </div>
+    </div>
+
+    <div class="box">
+      <img src="img/tırnak.jpg" alt="Alıntı"/>
+      <p>Çıtır Yufka Mantısı tarifini denedim ve sonuç muhteşemdi! Hem kolay hem de lezzetli bir tarif. Lezzet Durağı'na teşekkürler, artık sık sık uygulayacağım tarifler bulabiliyorum.</p>
+    <img src="img/avatar2.jpg" alt="avatar"
+    class="user" />
+    <h3>Mehmet Yılmaz</h3>
+    <div class="stars">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+    </div>
+    </div>
+
+    <div class="box">
+      <img src="img/tırnak.jpg" alt="Alıntı"/>
+      <p>Portakallı Tavuk Sote tarifini denedim ve herkes bayıldı! Tarifin adımları oldukça açık ve netti, böylece herhangi bir sorun yaşamadan mükemmel bir sonuç elde ettim. Lezzet Durağı'ndaki diğer tariflere de göz atacağım, eminim hepsi birbirinden harika!</p>
+    <img src="img/avatar3.jpg" alt="avatar"
+    class="user" />
+    <h3>Selin Aksoy</h3>
+    <div class="stars">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+    </div>
+    </div>
+
+    <div class="box">
+      <img src="img/tırnak.jpg" alt="Alıntı"/>
+      <p>Fellah Köfte tarifini denedim ve gerçekten etkilendim!Köftenin kıvamı ve lezzeti harikaydı.Lezzet Durağı'ndaki tariflerle her zaman güvende hissediyorum, teşekkürler!"</p>
+    <img src="img/avatar4.jpg" alt="avatar"
+    class="user" />
+    <h3>Can Demirci</h3>
+    <div class="stars">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="iletişim">
+  <h1 class="heading">Bize Ulaşın</h1>
+  <div class="row">
+    <iframe 
+    class="video"
+    width="300" height="600" src="https://www.youtube.com/embed/Da136dqa3is?si=oVQf8NrbYb4_WuMW"
+     title="YouTube video player" frameborder="0" 
+     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     <form>
+      <h3>Bana Ulaşın</h3>
+      <div class="inputBox">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Ad"/>
+      </div>
+
+      <div class="inputBox">
+        <i class="fas fa-envelope"></i>
+        <input type="email" placeholder="email"/>
+      </div>
+
+      <div class="inputBox">
+        <i class="fas fa-phone"></i>
+        <input type="numara" placeholder="Numara"/>
+      </div>
+      <input type="submit" class="btn" value="Hemen Ulaşın">
+     </form>
+  </div>
+</section>
+
+<section class="blogs">
+<h1 class="heading">Bloğum</h1>
+<div class="box-container">
+  <div class="box">
+    <div class="image">
+      <img src="img/ıspanak.jpg" alt="blog"/>
+    </div>
+    <div class="content">
+      <a href="#" class="title">Ispanağın Yanına Ne Gider?</a>
+      <span>by admin / 9 Haziran 2004</span>
+      <p>Sebzeli Bulgur Pilavı,Sebzeli Bulgur Pilavı,Patlıcanlı Ekmek Kebabı,
+       Yoğurt Çorbası,Perde Pilavı ile sunulabilir.</p>
+      <a href="#" class="btn">Devamını Oku</a>
+      
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="image">
+      <img src="img/tavuk2.jpg" alt="blog"/>
+    </div>
+    <div class="content">
+      <a href="#" class="title">Tavuğun Yanına Ne Gider? </a>
+      <span>by admin /26 Kasım 2002</span>
+      <p>Yeşil Mercimek Çorbası,Yoğurt Çorbası,Arpa Şehriye Pilavı,Pesto Soslu Makarna,Mantarlı Kremalı Spagetti ile sunulabilir.</p>
+      <a href="#" class="btn">Devamını Oku</a>
+      
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="image">
+      <img src="img/balık.jpg" alt="blog"/>
+    </div>
+    <div class="content">
+      <a href="#" class="title">Balığın Yanında Ne Yenir?</a>
+      <span>by admin / 26 Ekim 2001</span>
+      <p>Fava,Humus,Patlıcan Salatası,Havuç Tarator,Karides Tava,Şakşuka,Patates Salatası,Börülce Salatası ile sunulabilir.
+      </p>
+      <a href="#" class="btn">Devamını Oku</a>
+      
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="image">
+      <img src="img/pilav.jpg" alt="blog"/>
+    </div>
+    <div class="content">
+      <a href="#" class="title">Pilavın Yanına Ne Gider?</a>
+      <span>by admin / 13 Nisan 2004</span>
+      <p>Etli Kuru Fasulye,Nohut Yemeği,Türlü,Patlıcan Musakka,Bezelye,Tavuk Sote,Zeytinyağlı Taze Fasulye,Tavuk Haşlaması ile sunulabilir.</p>
+      <a href="#" class="btn">Devamını Oku</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="ensevilen">
+  <h1 class="heading">En Sevilenler</h1>
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="img/lahmacun.jpg" style="width:900px; height: 500px;">
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="img/kebap.jpg" style="width:900px; height: 500px;">
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="img/künefe.jpg" style="width:900px; height: 500px;">
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+</section>
+
+<button id="showInfo">Bilgi Kutusu Göster</button>
+
+<div id="infoBox" class="hidden">
+  <h2>Bugünün Sözü</h2>
+  <p>"Yemek yapmak, sevgi dolu ellerin büyülü dokunuşudur."</p>
+  <button id="closeInfo">Kapat</button>
+</div>
+
+<p id="myText">Lezzet dolu yolculuğumuzun sonuna geldik ama yemek tutkumuz hiç bitmeyecek! Her tarif bir hikaye, her tat bir macera... Yemek sitemizdeki lezzetlerle dolu dünyamıza tekrar bekleriz. Afiyet olsun!"</p>
+ 
+<section class="liste">
+<div id="yapılacaklar">
+<h2>Yapılacak Tarifler</h2>
+</div>
+
+<input type="text" id="tarifAdi" placeholder="Tarif adı girin">
+<button id="tarifEkleButton">Tarif Ekle</button>
+
+<ul id="tarifListesi">
+ <li>Latte Pasta</li>
+ <li>Çerkez Pilavı</li>
+ <li>Mantı Tadında Kuskus</li>
+ <li>lahmacun</li>
+ <li>künefe</li>
+</ul>
+</section>
+
+<div class="comment-section">
+  <h2>Yorum Yap</h2>
+  <form id="commentForm">
+      <label for="name">Adınız:</label><br>
+      <input type="text" id="name" name="name"><br>
+      <label for="comment">Yorumunuz:</label><br>
+      <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+      <button type="submit">Yorum Ekle</button>
+  </form>
+  <div id="commentList"></div>
+</div>
+
+
+<div class="recipe">
+  <h2>Mantı Tadında Kuskus</h2>
+  <p>Bu tarif çok lezzetli...</p>
+  <span class="favorite">&#10084;</span>
+</div>
+
+<div id="kayan-panel">
+  Sayfamı Paylaşın!
+</div>
+
+<section class="footer">
+  <div class="search">
+    <input type="text" 
+    class="search-input"
+    placeholder="Search">
+    <button class="btn btn-primary">Ara</button>
+  </div>
+<div class="paylaş">
+  <a href="#" class="fab fa-facebook"></a>
+  <a href="#" class="fab fa-instagram"></a>
+  <a href="#" class="fab fa-twitter"></a>
+  <a href="#" class="fab fa-pinterest"></a>
+</div>
+<div class="links">
+  <a href="#">Ana Sayfa</a>
+  <a href ="#">Tarifler</a>
+  <a href ="#">Menüler</a>
+  <a href ="#">Trend</a>
+  <a href ="#">Yorumlar</a>
+  <a href ="#">Blog</a>
+</div>
+
+<div class="credit">
+  created by <span>Esra BEDİR</span> | all rigths
+  reserved
+</div>
+</section>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Yukarı Çıkmak İçin Tıklayın</button>
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous">
+</script>
+  <script src="js/script.js"></script>
+</div>
+
+
+   </body>
+   </html>
