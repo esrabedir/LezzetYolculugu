@@ -1,23 +1,3 @@
-// Get the button:
-let mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-
 $(document).ready(function () {
 
     $('a').mouseenter(
@@ -82,32 +62,18 @@ if (navigator.geolocation) {
     console.log(`Enlem: ${ en } | Boylam: ${ boy }`);
   }
 
-  function updateTime() {
-    const now = new Date();
-    const clockElement = document.getElementById('clock');
-    const dateElement = document.getElementById('date');
-
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-    const day = now.toLocaleString('default', { weekday: 'long' });
-    const month = now.toLocaleString('default', { month: 'long' });
-    const dayOfMonth = now.getDate();
-    const year = now.getFullYear();
-
-    const timeString = `${hours}:${minutes}:${seconds}`;
-    const dateString = `${day}, ${month} ${dayOfMonth}, ${year}`;
-
-    clockElement.textContent = timeString;
-    dateElement.textContent = dateString;
-}
-
-// İlk çağrıyı yap
-updateTime();
-
-// 1 saniyede bir zamanı güncelle
-setInterval(updateTime, 1000);
-
+  function display_c(){
+    var refresh=1000; // Refresh rate in milli seconds
+    mytime=setTimeout('display_ct()',refresh)
+ }
+ 
+ function display_ct() {
+   var CDate = new Date()
+   var NewDate=CDate.toDateString(); 
+   NewDate = NewDate + " - " + CDate.toLocaleTimeString();
+   document.getElementById('ct').innerHTML = NewDate;
+   display_c();
+ }
 
 $(document).ready(function() {
   // Bilgi kutusunu göster
@@ -124,20 +90,15 @@ $(document).ready(function() {
 
 var textElement = document.getElementById('myText');
 
-// Metnin üzerine gelindiğinde rengini değiştiren fonksiyon
-function changeColorOnHover() {
-    // Metnin rengini rastgele bir renk olarak ayarla
-    var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-    textElement.style.color = randomColor;
+function mouseOver(element)
+{
+  element.style.color ='red';
+}
+function mouseOut(element)
+{
+  element.style.color ='black';
 }
 
-// Metnin üzerine gelindiğinde rengini değiştir
-textElement.addEventListener('mouseenter', changeColorOnHover);
-
-// Metnin üzerinden çıkıldığında rengini eski haline getir
-textElement.addEventListener('mouseleave', function() {
-    textElement.style.color = 'white'; // Boş bırakarak varsayılan rengi kullan
-});
 
 if (confirm("Devam etmek istiyor musunuz?")) {
   console.log("Kullanıcı onayladı.");

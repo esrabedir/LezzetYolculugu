@@ -24,11 +24,10 @@
     Bir tutam sevgi, bir kaşık lezzet ile buluşur.
 </div>
 
-  
-  <div class="clock-container">
-    <div class="clock" id="clock"></div>
-    <div class="date" id="date"></div>
-</div>
+<body onload=display_ct();>
+  <span id='ct' ></span>
+
+ 
 
 <button class="scroll-down-btn" id="scrollDownBtn">
   <span>↓</span>
@@ -412,11 +411,12 @@
 
 <div id="infoBox" class="hidden">
   <h2>Bugünün Sözü</h2>
-  <p>"Yemek yapmak, sevgi dolu ellerin büyülü dokunuşudur."</p>
+  <p></p>
   <button id="closeInfo">Kapat</button>
 </div>
 
-<p id="myText">Lezzet dolu yolculuğumuzun sonuna geldik ama yemek tutkumuz hiç bitmeyecek! Her tarif bir hikaye, her tat bir macera... Yemek sitemizdeki lezzetlerle dolu dünyamıza tekrar bekleriz. Afiyet olsun!"</p>
+<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Lezzet dolu yolculuğumuzun sonuna geldik ama yemek tutkumuz hiç bitmeyecek! Her tarif bir hikaye, her tat bir macera... Yemek sitemizdeki lezzetlerle dolu dünyamıza tekrar bekleriz. Afiyet olsun!"</div>
+
  
 <section class="liste">
 <div id="yapılacaklar">
