@@ -236,3 +236,8 @@ $(document).ready(function(){
 function myFunction() {
     return "Yaptığınız değişiklikleri kaydedin";
 }
+
+btn4.onclick=function(){
+  this.style.background="red";// tıklanan butonun zemin rengini kırmızı yap
+  this.style.color="#ffffff";//tıklanan butonun yazı rengini beyaz yap
+}
