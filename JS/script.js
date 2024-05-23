@@ -141,11 +141,10 @@ window.onload = function() {
     heading.classList.add('animate');
 };
 
-document.getElementById("scrollup").addEventListener("click", scrollUpmost);
-
-function scrollUpmost() {
-    $(document).scrollTop();
-}
+$("#scrollup").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
 
 const commentForm = document.getElementById('commentForm');
 const commentList = document.getElementById('commentList');
