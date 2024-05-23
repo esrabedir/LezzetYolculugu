@@ -12,12 +12,12 @@ $(document).ready(function () {
 
 });
 
-/* Open when someone clicks on the span element */
+
 function openNav() {
     document.getElementById("myNav").style.width = "100%";
   }
   
-  /* Close when someone clicks on the "x" symbol inside the overlay */
+
   function closeNav() {
     document.getElementById("myNav").style.width = "0%";
   }
@@ -25,12 +25,11 @@ function openNav() {
   let slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
+
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
@@ -293,5 +292,10 @@ $(document).ready(function() {
   });
 });
 
-
+$(document).ready(function() {
+  // Aşağı Git butonuna tıklandığında aşağı kaydır
+  $('#scrollDownBtn').click(function() {
+    $('html, body').animate({scrollTop: $('#content').offset().top}, 'slow');
+  });
+});
 

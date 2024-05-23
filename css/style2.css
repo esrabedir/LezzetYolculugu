@@ -47,32 +47,16 @@
   margin: 5px;
 }
 
-.scroll-down-btn {
+#scrollDownBtn {
   position: fixed;
-  top: 20px; /* Yükseklik ayarlanacak */
+  bottom: 20px;
   right: 20px;
-  background-color: #007bff;
-  color: #fff;
-  width: 40px;
-  height: 40px;
+  padding: 10px;
   border: none;
-  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.scroll-down-btn.show {
-  opacity: 1;
-}
-
-.scroll-down-btn.show {
-  opacity: 1;
 }
 
 #cookieConsent {
