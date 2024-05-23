@@ -47,7 +47,7 @@
   margin: 5px;
 }
 
-#scrollDownBtn {
+#scrollBottomBtn {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -58,6 +58,7 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
 
 #cookieConsent {
   position: fixed;

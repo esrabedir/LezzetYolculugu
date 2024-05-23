@@ -292,10 +292,16 @@ $(document).ready(function() {
   });
 });
 
-$(document).ready(function() {
-  // Aşağı Git butonuna tıklandığında aşağı kaydır
-  $('#scrollDownBtn').click(function() {
-    $('html, body').animate({scrollTop: $('#content').offset().top}, 'slow');
+document.addEventListener('DOMContentLoaded', function() {
+  var scrollBottomBtn = document.getElementById('scrollBottomBtn');
+
+  // Aşağı in butonuna tıklandığında en aşağı kaydır
+  scrollBottomBtn.addEventListener('click', function() {
+      var contentHeight = document.getElementById('content').scrollHeight;
+      window.scrollTo({
+          top: contentHeight,
+          behavior: 'smooth'
+      });
   });
 });
 
