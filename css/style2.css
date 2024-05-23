@@ -913,3 +913,19 @@ select
     border: 1px solid #ccc;
     cursor: pointer;
 }
+
+#survey, #result {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+h2#survey {
+  margin-top: 0;
+}
+
+#resultText {
+  font-weight: bold;
+}

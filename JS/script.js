@@ -279,3 +279,17 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function() {
+  $("#submit").click(function() {
+    // Seçilen renk değerini al
+    var selectedColor = $("input[name='color']:checked").val();
+    
+    // Sonucu göster
+    $("#survey").hide();
+    $("#result").show();
+    
+    // Sonucu yazdır
+    $("#resultText").text("Favori renginiz: " + selectedColor);
+  });
+});
+
