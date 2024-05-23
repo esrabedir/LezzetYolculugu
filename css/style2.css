@@ -908,32 +908,8 @@ select
   }
 
 
-  #text {
+  .text3 .p {
+    padding: 10px;
+    border: 1px solid #ccc;
     cursor: pointer;
-    display: block;
-    background-color: #555;
-    width: 50px;
-    padding: 8px;
-    font-size: 10px;
-    margin: auto;
-    border-radius:6px ;
-  }
-
-  #list li {
-    padding: 5px 0px;
-  }
-
-  #list li a{
-    text-decoration: none;
-    color: #fff;
-    font: size 10px;
-  }
-
-  #list {
-    background-color: lightsalmon;
-    padding: 10px 0px;
-    margin-top:10px;
-    transition: 0.5s;
-    border-radius: 6px;
-    opacity: 0;
-  }
+}
