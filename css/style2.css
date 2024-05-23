@@ -741,6 +741,73 @@ a{
   font-size: 20px;
 }
 
+select
+{
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 0;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.drop-down {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  padding: 5px;
+  border-radius: 20px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  box-sizing:border-box;
+  margin-top: 25px;
+  text-align: center;
+  display: none;
+}
+
+.menu i {
+  display: inline-block;
+  border-radius: 20px;
+  font-size:35px;
+  background-color: yellow;
+  margin: 4px;
+}
+
+.menu::before 
+{
+  content: '';
+  background-color: #fff;
+  position: absolute;
+  bottom:100%;
+  right: 10%;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.menu::after {
+  content: '';
+  background-color: #fff;
+  position: absolute;
+  bottom: 50%;
+  right:10%;
+  height: 40px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+
   #kayan-panel {
     position: fixed;
     top: -100px; /* Panelin başlangıçta ekranın dışında olmasını sağlar */

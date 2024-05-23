@@ -27,10 +27,6 @@
 <body onload=display_ct();>
   <span id='ct' ></span>
 
-  
- 
-
-
 <div id="cookieConsent">
   <div id="closeCookieConsent">x</div>
   Bu web sitesi çerez kullanmaktadır. Çerezlerin kullanımı hakkında daha fazla bilgi almak için <a href="#" target="_blank">çerez politikamızı</a> inceleyebilirsiniz.
@@ -432,6 +428,18 @@
       <button type="submit">Yorum Ekle</button>
   </form>
   <div id="commentList"></div>
+</div>
+
+<div class="drop-down">
+  <select onmousedown='dropDown(event,this)'>
+    <option id="option">Happy</option>
+  </select>
+
+  <div class="menu" id="menu">
+    <i id="Happy" onclick="item(this)" class="far fa-grin"></i>
+    <i id="Sad" onclick="item(this)" class="far fa-frown"></i>
+    <i id="Angry" onclick="item(this)" class="far fa-angry"></i>
+  </div>
 </div>
 
 

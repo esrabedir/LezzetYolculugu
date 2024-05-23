@@ -239,6 +239,35 @@ function scrollUpmost() {
 function changeColor(event) {
   var color= 'yellow';
   event.style.backgroundColor= color;
-  
+}
+
+var a =1;
+function dropDown(e)
+{
+  e.preventDefault();
+  if(a==1)
+{
+  document.getElementById('menu').style.display='block';
+  a=0;
+}
+else
+  {
+    document.getElementById('menu').style.display='block';
+    a=1;
+  }
+}
+
+function item(x)
+{
+  var content = x.id;
+  document.getElementById('option').innerHTML =content;
+  document.getElementById('menu').style.display='none';
+if(a==1)
+  {
+    a=0;
+  }
+else{
+  a=1;
+}
 }
 
