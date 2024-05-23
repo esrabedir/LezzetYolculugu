@@ -1,3 +1,10 @@
+function hosgeldinizMesaji() {
+  console.log("Hoşgeldiniz!");
+}
+
+// Fonksiyon çağrısı
+hosgeldinizMesaji();
+
 $(document).ready(function () {
 
     $('a').mouseenter(
@@ -247,9 +254,4 @@ document.getElementById("scrollup").addEventListener("click", scrollUpmost);
 
 function scrollUpmost() {
     $(document).scrollTop();
-}
-
-function displayGreeting() {
-  let usrname = document.getElementById('usrname').value;
-  document.getElementById('outputDiv').innerHTML = 'Hello ' + usrname + ', Welcome to Livewell page' + '<br> ' + 'You are officially a livewell member ' + usrname + '!';
 }
