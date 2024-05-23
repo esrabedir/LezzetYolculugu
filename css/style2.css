@@ -908,7 +908,7 @@ select
   }
 
 
-  .text3 .p {
+  p#text3 {
     padding: 10px;
     border: 1px solid #ccc;
     cursor: pointer;
