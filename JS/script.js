@@ -271,3 +271,19 @@ else{
 }
 }
 
+var x=0;
+var element=document.getElementById("list");
+function menu(text) {
+  if(x==0)
+    {
+      text.innerHTML=':)'
+      element.style.opacity=1;
+      x=1;
+    }
+    else {
+      text.innerHTML=':('
+      element.style.opacity=0;
+      x=0;
+    }
+}
+
