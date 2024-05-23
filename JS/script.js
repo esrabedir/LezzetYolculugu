@@ -141,22 +141,11 @@ window.onload = function() {
     heading.classList.add('animate');
 };
 
-const scrollDownBtn = document.getElementById('scrollDownBtn');
+document.getElementById("scrollup").addEventListener("click", scrollUpmost);
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        scrollDownBtn.classList.add('show');
-    } else {
-        scrollDownBtn.classList.remove('show');
-    }
-});
-
-scrollDownBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: 'smooth'
-    });
-});
+function scrollUpmost() {
+    $(document).scrollTop();
+}
 
 const commentForm = document.getElementById('commentForm');
 const commentList = document.getElementById('commentList');
@@ -240,4 +229,10 @@ function myFunction() {
 btn4.onclick=function(){
   this.style.background="red";// tıklanan butonun zemin rengini kırmızı yap
   this.style.color="#ffffff";//tıklanan butonun yazı rengini beyaz yap
+}
+
+document.getElementById("scrollup").addEventListener("click", scrollUpmost);
+
+function scrollUpmost() {
+    $(document).scrollTop();
 }

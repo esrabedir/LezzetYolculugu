@@ -47,32 +47,14 @@
   margin: 5px;
 }
 
-.scroll-down-btn {
-  position: fixed;
-  top: 20px; /* Yükseklik ayarlanacak */
-  right: 20px;
-  background-color: #007bff;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+.big_div {
+  border: 1px solid black;
+  height: 1200px;
+
 }
 
-.scroll-down-btn.show {
-  opacity: 1;
-}
-
-.scroll-down-btn.show {
-  opacity: 1;
+#scrollup {
+  margin-top: 900px;
 }
 
 #cookieConsent {
