@@ -1,10 +1,3 @@
-function hosgeldinizMesaji() {
-  console.log("Hoşgeldiniz!");
-}
-
-// Fonksiyon çağrısı
-hosgeldinizMesaji();
-
 $(document).ready(function () {
 
     $('a').mouseenter(
@@ -219,16 +212,7 @@ $(document).ready(function(){
   });
 });
 
-$(document).ready(function(){
-  $('#hoverElement').hover(
-      function(){
-          $(this).css('background-color', 'lightgreen');
-      },
-      function(){
-          $(this).css('background-color', 'lightblue');
-      }
-  );
-});
+
 
 $(document).ready(function(){
   // Paneli aşağı kaydırma işlemi
@@ -245,13 +229,16 @@ function myFunction() {
     return "Yaptığınız değişiklikleri kaydedin";
 }
 
-btn4.onclick=function(){
-  this.style.background="red";// tıklanan butonun zemin rengini kırmızı yap
-  this.style.color="#ffffff";//tıklanan butonun yazı rengini beyaz yap
-}
 
 document.getElementById("scrollup").addEventListener("click", scrollUpmost);
 
 function scrollUpmost() {
     $(document).scrollTop();
 }
+
+function changeColor(event) {
+  var color= 'yellow';
+  event.style.backgroundColor= color;
+  
+}
+
