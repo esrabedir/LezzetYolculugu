@@ -292,16 +292,5 @@ $(document).ready(function() {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var scrollBottomBtn = document.getElementById('scrollBottomBtn');
 
-  // Aşağı in butonuna tıklandığında en aşağı kaydır
-  scrollBottomBtn.addEventListener('click', function() {
-      var contentHeight = document.getElementById('content').scrollHeight;
-      window.scrollTo({
-          top: contentHeight,
-          behavior: 'smooth'
-      });
-  });
-});
 
