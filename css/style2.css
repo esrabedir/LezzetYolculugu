@@ -47,16 +47,33 @@
   margin: 5px;
 }
 
-.big_div {
-  border: 1px solid black;
-  height: 1200px;
-
+.scroll-down-btn {
+  position: fixed;
+  top: 20px; /* Yükseklik ayarlanacak */
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-#scrollup {
-  margin-top: 900px;
+.scroll-down-btn.show {
+  opacity: 1;
 }
 
+.scroll-down-btn.show {
+  opacity: 1;
+}
 
 #cookieConsent {
   position: fixed;
@@ -666,10 +683,7 @@ a{
     font-size: 30px;
   }
 
-  #tarifEkleButton {
-    border: 1px;
-    border: 3rem;
-  }
+  
 
   .comment-section {
     position: relative;
@@ -696,25 +710,36 @@ a{
     font-weight: normal;
 }
 
+.todolist {
+  width: 360px;
+}
 
-  #tarifListesi {
-    color: white;
-    font-size: 20px;
-  }
+#inputField {
+  width: 300px;
+  height: 46px;
+  border: 1px solid black;
+  outline: none;
+  font-size: 25px;
+  vertical-align: middle;
+}
 
-  #tarifAdi {
-    border: solid 1px white;
-    border-radius: 3rem;
-    width: 350px;
-    height: 35px;
-  }
+#addToDo {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  vertical-align: middle;
+  font-size: 30px;
+}
 
-  #tarifEkleButton {
-    border: solid 1px white;
-    width: 100px;
-    height: 25px;
-    border-radius: 3rem;
-  }
+.to-dos {
+  margin-top: 25px;
+}
+
+.paragraph-styling {
+  margin: 0;
+  cursor: pointer;
+  font-size: 20px;
+}
 
   #kayan-panel {
     position: fixed;
